@@ -5,7 +5,14 @@ def main():
 
     count_of_chars = char_count(text)
 
-    print(count_of_chars)
+    print("--- Begin report of books/frankenstein.txt ---")
+    print(f"{word_count} words found in the document\n")
+
+    for char_value in count_of_chars:
+        if char_value.isalpha():
+            print(f"The '{char_value}' character was found {count_of_chars[char_value]} times")
+
+    print("--- End report ---")
 
 
 def get_text(path):
